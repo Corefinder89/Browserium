@@ -1,6 +1,6 @@
-from utility.utility import Utility
-from utility.os_type import OS_type
-from utility.logger import Logger
+from browserium.utility.utility import Utility
+from browserium.utility.os_type import OS_type
+from browserium.utility.logger import Logger
 import requests
 import os
 
@@ -47,7 +47,6 @@ class Chromedriver(object):
             url_builder_mac = self.url_builder('_mac')
             self.ut.log_message("INFO","Downloading the required binary for chromedriver")
             self.ut.driver_downloader(url_builder_mac, dir_path)
-            print "\n"
             self.ut.log_message("INFO", "Download completed")
             self.ut.unzip_file('dir_chromedriver/')
             self.ut.log_message("INFO","Unarchiving contents completed")
@@ -57,7 +56,6 @@ class Chromedriver(object):
             url_builder_linux = self.url_builder('_linux')
             self.ut.log_message("INFO","Downloading the required binary for chromedriver")
             self.ut.driver_downloader(url_builder_linux, dir_path)
-            print "\n"
             self.ut.log_message("INFO", "Download completed")
             self.ut.unzip_file('dir_chromedriver/')
             self.ut.log_message("INFO","Unarchiving contents completed")

@@ -1,5 +1,6 @@
 import argparse
 from ..driver import Driver
+from browserium.utility.utility import Utility
 
 parser = argparse.ArgumentParser()
 subparser = parser.add_subparsers(dest='command',help="download")
@@ -14,6 +15,7 @@ delete.add_argument("--driver", help="delete all drivers")
 
 def main():
     args = parser.parse_args()
+
     driver_object = Driver.get_driver(args.driver)()
     if args.command == "download":
         driver_object.download_driver()

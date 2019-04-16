@@ -1,6 +1,6 @@
-from utility.utility import Utility
-from utility.os_type import OS_type
-from utility.logger import Logger
+from browserium.utility.utility import Utility
+from browserium.utility.os_type import OS_type
+from browserium.utility.logger import Logger
 import os
 
 class Operadriver(object):
@@ -33,7 +33,6 @@ class Operadriver(object):
             url_builder_mac = self.parse_operadriver_api()
             self.log.log_info("Downloading the required binary for operadriver")
             self.ut.driver_downloader(url_builder_mac['mac'], dir_path)
-            print "\n"
             self.log.log_info("Download completed")
             self.ut.unzip_file('dir_operadriver/')
             self.log.log_info("Unarchiving contents completed")
@@ -43,7 +42,6 @@ class Operadriver(object):
             url_builder_linux = self.parse_operadriver_api()
             self.log.log_info("Downloading the required binary for operadriver")
             self.ut.driver_downloader(url_builder_linux['linux'], dir_path)
-            print "\n"
             self.log.log_info("Download completed")
             self.ut.unzip_file('dir_operadriver/')
             self.log.log_info("Unarchiving contents completed")

@@ -5,7 +5,7 @@ with open('README.md') as f:
 
 setup(
     name = 'browserium',
-    version = '1.2.2',
+    version = '2.0.0',
     description = 'A single endpoint for your browser driver configuration',
     author = [
         'Soumyajit Basu',
@@ -19,15 +19,18 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.7',
         'License :: OSI Approved :: MIT License',
         'Operating System :: MacOS :: MacOS X',
         'Operating System :: POSIX',
-        'Topic :: Software Development :: Quality Assurance'
+        'Topic :: Software Development :: Quality Assurance',
+        'Topic :: Software Development :: Testing'
     ],
     install_requires = [
         'requests',
         'wget',
-        'selenium'
+        'selenium',
+        'pytest-html'
     ],
     packages = [
         'browserium',
@@ -46,7 +49,7 @@ setup(
         ]
     },
     url = "https://github.com/browserium/Browserium",
-    download_url = "https://github.com/browserium/Browserium/archive/1.2.2.tar.gz",
+    download_url = "https://github.com/browserium/Browserium/archive/2.0.0.tar.gz",
     long_description = long_description,
     long_description_content_type = 'text/markdown'
 )
